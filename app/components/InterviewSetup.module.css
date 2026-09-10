@@ -1,0 +1,411 @@
+.setupPage {
+  min-height: 100vh;
+  padding: 32px 24px 70px;
+}
+
+.container {
+  width: min(920px, 100%);
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 55px;
+}
+
+.backButton {
+  border: 0;
+  background: transparent;
+  color: #667085;
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+.backButton:hover {
+  color: #171923;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.brandIcon {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  background: #7c3aed;
+  color: white;
+}
+
+.heading {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 42px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 13px;
+  border: 1px solid #e9dfff;
+  border-radius: 999px;
+  background: #faf8ff;
+  color: #6d28d9;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.heading h1 {
+  margin: 18px 0;
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+
+.heading h1 span {
+  background: linear-gradient(135deg, #7c3aed, #4f46e5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.heading p {
+  max-width: 600px;
+  margin: auto;
+  color: #667085;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #e7e9ef;
+  border-radius: 24px;
+  padding: 34px;
+  box-shadow: 0 20px 60px rgba(16, 24, 40, 0.07);
+}
+
+.section {
+  margin-bottom: 32px;
+}
+
+.section > label,
+.labelRow label {
+  display: block;
+  margin-bottom: 13px;
+  color: #171923;
+  font-size: 0.92rem;
+  font-weight: 650;
+}
+
+.roleGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.roleCard {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-height: 66px;
+  padding: 14px 16px;
+  border: 1px solid #e4e7ec;
+  border-radius: 14px;
+  background: white;
+  color: #344054;
+  font-size: 0.95rem;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.roleCard:hover,
+.smallOption:hover,
+.durationCard:hover {
+  border-color: #b9a3f5;
+  transform: translateY(-1px);
+}
+
+.selected {
+  border-color: #8b5cf6 !important;
+  background: #faf8ff !important;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.08);
+}
+
+.roleIcon {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: #f3efff;
+  color: #6d28d9;
+}
+
+.roleName {
+  flex: 1;
+}
+
+.check {
+  width: 21px;
+  height: 21px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #7c3aed;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.segmented {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 4px;
+  border-radius: 12px;
+  background: #f2f4f7;
+}
+
+.segmented button {
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: #667085;
+  padding: 11px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.segmented button.active {
+  background: white;
+  color: #5b21b6;
+  box-shadow: 0 2px 8px rgba(16, 24, 40, 0.08);
+  font-weight: 650;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.smallGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.experienceGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.smallOption {
+  border: 1px solid #e4e7ec;
+  background: white;
+  border-radius: 10px;
+  padding: 11px 8px;
+  color: #475467;
+  font-size: 0.86rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.durationGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.durationCard {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  position: relative;
+  border: 1px solid #e4e7ec;
+  border-radius: 13px;
+  background: white;
+  padding: 15px;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.durationIcon {
+  font-size: 1.25rem;
+  color: #7c3aed;
+}
+
+.durationText {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.durationText strong {
+  color: #344054;
+  font-size: 0.9rem;
+}
+
+.durationText small {
+  color: #98a2b3;
+  font-size: 0.72rem;
+}
+
+.durationCard .check {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.labelRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.labelRow span {
+  color: #98a2b3;
+  font-size: 0.75rem;
+}
+
+.section textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 125px;
+  padding: 14px 15px;
+  border: 1px solid #e4e7ec;
+  border-radius: 12px;
+  background: white;
+  color: #344054;
+  font-family: inherit;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.section textarea:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.08);
+}
+
+.section textarea::placeholder {
+  color: #98a2b3;
+}
+
+.hint {
+  margin: 8px 0 0;
+  color: #98a2b3;
+  font-size: 0.76rem;
+}
+
+.summary {
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #e9dfff;
+  border-radius: 15px;
+  background: #faf8ff;
+}
+
+.summaryTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #5b21b6;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 17px;
+}
+
+.summaryItems {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.summaryItems div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.summaryItems small {
+  color: #98a2b3;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.summaryItems strong {
+  color: #344054;
+  font-size: 0.84rem;
+}
+
+.startButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border: 0;
+  border-radius: 12px;
+  padding: 14px 20px;
+  background: #7c3aed;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.startButton:hover {
+  background: #6d28d9;
+}
+
+.note {
+  margin: 13px 0 0;
+  text-align: center;
+  color: #98a2b3;
+  font-size: 0.75rem;
+}
+
+@media (max-width: 700px) {
+  .setupPage {
+    padding: 20px 15px 50px;
+  }
+
+  .header {
+    margin-bottom: 35px;
+  }
+
+  .card {
+    padding: 22px;
+    border-radius: 18px;
+  }
+
+  .roleGrid,
+  .row,
+  .durationGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .summaryItems {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .heading h1 {
+    font-size: 2.5rem;
+  }
+}

@@ -1,0 +1,276 @@
+.page {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at 50% 10%,
+      rgba(124, 58, 237, 0.08),
+      transparent 35%
+    ),
+    #f8f9fc;
+  padding: 32px 20px 60px;
+}
+
+.container {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #171923;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.brandIcon {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: #7c3aed;
+  color: white;
+  font-size: 16px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e8e8ef;
+  border-radius: 24px;
+  padding: 48px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(20, 20, 40, 0.06);
+}
+
+.resultsIcon {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 20px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #f0eafe;
+  color: #7c3aed;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #7c3aed;
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0.1em;
+}
+
+.card h1 {
+  margin: 0;
+  color: #171923;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.subtitle {
+  max-width: 480px;
+  margin: 14px auto 36px;
+  color: #6b7280;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.scoreCircle {
+  width: 190px;
+  height: 190px;
+  margin: 0 auto 38px;
+  padding: 10px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: conic-gradient(#7c3aed var(--score), #eeeafa 0);
+}
+
+.scoreInner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 3px;
+}
+
+.scoreInner strong {
+  font-size: 4rem;
+  line-height: 1;
+  color: #171923;
+  letter-spacing: -0.06em;
+}
+
+.scoreInner span {
+  color: #8b8f9d;
+  font-size: 1rem;
+}
+
+.performance {
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.performanceHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #4b5563;
+  font-size: 0.9rem;
+}
+
+.performanceHeader strong {
+  color: #171923;
+}
+
+.progress {
+  width: 100%;
+  height: 9px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: #eeeafa;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: inherit;
+  background: #7c3aed;
+  transition: width 0.5s ease;
+}
+
+.feedbackBox {
+  padding: 22px;
+  margin-bottom: 28px;
+  border: 1px solid #e8e4f7;
+  border-radius: 16px;
+  background: #faf9ff;
+  text-align: left;
+}
+
+.feedbackTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  color: #5b21b6;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.feedbackTitle span {
+  color: #7c3aed;
+}
+
+.feedbackBox p {
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.65;
+  font-size: 0.92rem;
+}
+
+.restartButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border: 0;
+  border-radius: 12px;
+  padding: 15px 20px;
+  background: #7c3aed;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 650;
+  transition: 0.2s ease;
+}
+
+.restartButton:hover {
+  background: #6d28d9;
+  transform: translateY(-1px);
+}
+
+.restartButton span {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 22px 14px 40px;
+  }
+
+  .header {
+    margin-bottom: 30px;
+  }
+
+  .card {
+    padding: 32px 20px;
+    border-radius: 20px;
+  }
+
+  .scoreCircle {
+    width: 160px;
+    height: 160px;
+  }
+
+  .scoreInner strong {
+    font-size: 3.2rem;
+  }
+}
+
+.interviewMeta {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 0 auto 36px;
+  padding: 14px;
+  border: 1px solid #eeeef3;
+  border-radius: 14px;
+  background: #fafafa;
+  text-align: left;
+}
+
+.interviewMeta div {
+  min-width: 0;
+}
+
+.interviewMeta small {
+  display: block;
+  margin-bottom: 5px;
+  color: #9296a3;
+  font-size: 0.62rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+}
+
+.interviewMeta strong {
+  display: block;
+  overflow: hidden;
+  color: #30323d;
+  font-size: 0.78rem;
+  font-weight: 650;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .interviewMeta {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
