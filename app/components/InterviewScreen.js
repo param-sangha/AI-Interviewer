@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import styles from "./InterviewScreen.module.css";
 
 export default function InterviewScreen({
@@ -12,6 +13,18 @@ export default function InterviewScreen({
   onToggleMic,
   onFinish,
 }) {
+  const transcriptRef = useRef(null);
+  useEffect(() => {
+    const container = transcriptRef.current;
+
+    if (!container) return;
+
+    container.scrollTo({
+      top: container.scrollHeight,
+      behavior: "smooth",
+    });
+  }, [lines]);
+
   function getRemainingSeconds() {
     const minutes = parseInt(duration, 10) || 30;
     return Math.max(minutes * 60 - elapsed, 0);
@@ -32,7 +45,7 @@ export default function InterviewScreen({
       <header className={styles.topbar}>
         <div className={styles.brand}>
           <div className={styles.brandIcon}>✦</div>
-          <span>InterviewAI</span>
+          <span>IntervueAI</span>
         </div>
 
         <div className={styles.status}>
@@ -107,7 +120,7 @@ export default function InterviewScreen({
             <span className={styles.messageCount}>{lines.length} messages</span>
           </div>
 
-          <div className={styles.messages}>
+          <div ref={transcriptRef} className={styles.messages}>
             {lines.length === 0 && (
               <div className={styles.empty}>
                 <div className={styles.emptyIcon}>◌</div>
@@ -165,7 +178,7 @@ export default function InterviewScreen({
               onClick={onFinish}
               disabled={!ready || loading}
             >
-              {loading ? "Finishing..." : "End interview"}
+              {loading ? "Loading..." : "End interview"}
 
               <span>■</span>
             </button>

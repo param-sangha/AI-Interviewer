@@ -8,7 +8,7 @@ export default function LandingPage({ onStart }) {
       <nav className={styles.navbar}>
         <div className={styles.brand}>
           <div className={styles.brandIcon}>✦</div>
-          <span>InterviewAI</span>
+          <span>IntervueAI</span>
         </div>
 
         <button className={styles.navButton} onClick={onStart}>

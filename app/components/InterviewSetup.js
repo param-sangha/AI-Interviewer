@@ -39,7 +39,7 @@ export default function InterviewSetup({ onBack, onStart }) {
 
           <div className={styles.brand}>
             <div className={styles.brandIcon}>✦</div>
-            <span>InterviewAI</span>
+            <span>IntervueAI</span>
           </div>
         </header>
 

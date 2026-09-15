@@ -258,11 +258,16 @@ export default function Home() {
 
       rtm = null;
 
-      const result = await post("/api/score", {
+      console.log("TRANSCRIPT SENT FOR SCORING:", lines);
+
+      const data = await post("/api/score", {
         transcript: lines,
+        config: interviewConfig,
       });
 
-      setScore(result);
+      console.log("FINAL SCORE DATA:", data);
+
+      setScore(data);
       setReady(false);
       setStarted(false);
       setLoading(false);
